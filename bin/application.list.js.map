@@ -1,1 +1,1 @@
-{"version":3,"file":"application.list.js","sourceRoot":"","sources":["../application.list.ts"],"names":[],"mappings":";;AAAA;IACW,MAAM,KAAK,OAAO;QACrB,MAAM,CAAC;YACH,cAAc;SACjB,CAAC;IACN,CAAC;CAEJ;AAPD,0CAOC"}
+{"version":3,"file":"application.list.js","sourceRoot":"","sources":["../application.list.ts"],"names":[],"mappings":";;AAAA;IACW,MAAM,KAAK,OAAO;QACrB,MAAM,CAAC;YACH,cAAc,EAAE,UAAU;SAC7B,CAAC;IACN,CAAC;CAEJ;AAPD,0CAOC"}

@@ -4,13 +4,14 @@
   "description": "",
   "main": "bin/index.js",
   "scripts": {
-   "start": "tsc & npm run build:live",
+    "start": "tsc & npm run build:live",
     "build": "tsc",
     "build:live": " node ./bin/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^7.0.12",
     "serialport": "^4.0.7"
   }
 }

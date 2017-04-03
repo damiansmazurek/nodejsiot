@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../applications/formater/index.ts"],"names":[],"mappings":";;AACA,gEAA4D;AAC5D,kEAA8D;AAE9D;IACI,OAAO,CAAC,GAAG,CAAC,wCAAwC,CAAC,CAAC;IACtD,IAAI,cAAc,GAAG,IAAI,gCAAc,EAAE,CAAC;IAC1C,IAAI,eAAe,GAAG,IAAI,kCAAe,CAAC,cAAc,CAAC,CAAC;IAC1D,eAAe,CAAC,UAAU,EAAE,CAAC;AACjC,CAAC;AALD,oBAKC"}

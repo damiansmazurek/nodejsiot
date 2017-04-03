@@ -27,18 +27,23 @@ class JSONParser {
             switch (item) {
                 case '{':
                     jsonLevel++;
+                    if (!startedReading) {
+                        startPossition = i;
+                    }
                     startedReading = true;
                     break;
                 case '}':
                     jsonLevel--;
+                    if (!jsonLevel) {
+                        length = i;
+                    }
                     break;
             }
             if (jsonLevel == 0 && startedReading) {
-                var substring = json.substring(startPossition, length);
+                var substring = json.substring(startPossition, length + 1);
                 jsonArray.push(JSON.parse(substring));
-                startPossition += length;
                 startedReading = false;
-                length = 0;
+                // length = 0;
             }
         }
         return jsonArray;

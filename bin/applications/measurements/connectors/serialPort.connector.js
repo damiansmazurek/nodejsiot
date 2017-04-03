@@ -11,7 +11,7 @@ class SerialPortConnector {
         });
     }
     onDataReceived(dataReceivedFunction) {
-        this.port.on("data", function (data) { console.log(data.toString()); dataReceivedFunction(data); });
+        this.port.on("data", function (data) { dataReceivedFunction(data); });
     }
 }
 exports.SerialPortConnector = SerialPortConnector;

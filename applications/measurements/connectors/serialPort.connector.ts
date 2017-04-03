@@ -10,6 +10,6 @@ export class SerialPortConnector {
         });
     }
     onDataReceived(dataReceivedFunction: (data: any) => void) {
-        this.port.on("data", function (data) { console.log(data.toString()); dataReceivedFunction(data); });
+        this.port.on("data", function (data) { dataReceivedFunction(data); });
     }
 }

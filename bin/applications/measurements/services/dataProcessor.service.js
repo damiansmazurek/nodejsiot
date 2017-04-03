@@ -1,25 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const jsonparser_util_1 = require("../../../generic/utils/jsonparser.util");
 class DataProcessorService {
     static dataSendToBuffer(data) {
-        console.log('Saving data');
         DataProcessorService.dataBuffor += data.toString();
     }
     static onTimerBuffer(time, dataReceivedEvent) {
-        console.log(DataProcessorService.dataBuffor);
-        //var tmpDataBuffor =  JSONParser.parseJsonFormat(DataProcessorService.dataBuffor.toString());
-        //console.log(tmpDataBuffor);
-        dataReceivedEvent(null);
+        let tmpDataBuffor = jsonparser_util_1.JSONParser.parseJsonFormat(DataProcessorService.dataBuffor.toString());
+        DataProcessorService.dataBuffor = '';
+        dataReceivedEvent(DataProcessorService.countTimespanDataValue(tmpDataBuffor));
         setTimeout(() => DataProcessorService.onTimerBuffer(time, dataReceivedEvent), time);
     }
-    static countTimespanDataValue(time) {
+    static countTimespanDataValue(tmpDataBuffor) {
         return {
             timestamp: Date.now(),
-            msgType: 'variables',
-            variables: {
-                x: 0, y: 1, z: 2
-            }
+            msgType: 'variables_native',
+            variables: DataProcessorService.searchRandomValue(tmpDataBuffor)
         };
+    }
+    static searchRandomValue(values) {
+        return values[Math.floor(Math.random() * values.length)];
     }
 }
 DataProcessorService.dataBuffor = '';
