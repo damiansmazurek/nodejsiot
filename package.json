@@ -1,13 +1,16 @@
 {
-  "name": "nodejsiot",
+  "name": "nodejsiotsystem",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "main": "bin/index.js",
   "scripts": {
-    "test": "test"
+   "start": "tsc & npm run build:live",
+    "build": "tsc",
+    "build:live": " node ./bin/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "serialport": "^4.0.7"
+  }
 }
